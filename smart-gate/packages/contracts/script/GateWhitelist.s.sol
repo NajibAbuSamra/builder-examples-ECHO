@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0;
 
+import "@openzeppelin/contracts/utils/Strings.sol";
+
 import { Script } from "forge-std/Script.sol";
 import { console } from "forge-std/console.sol";
 import { ResourceId, WorldResourceIdLib } from "@latticexyz/world/src/WorldResourceId.sol";
@@ -39,13 +41,17 @@ contract GateWhitelist is Script {
 
     //Get the allowed corp
     uint256 size = vm.envUint("NUM_OF_ALLOWED_CORPS");
-    uint256[] memory corpID = new uint256[](size);
-    // for (uint256 i = 0; i < size; i++) {
-    //   corpID[i] = vm.envUint("ALLOWED_CORP_ID_0");
-    // }
-    corpID[0] = vm.envUint("ALLOWED_CORP_ID");
+    console.log("-------------------\nNUM_OF_ALLOWED_CORPS ", size);
+    uint256[] memory corpIDs = new uint256[](size);
+    for (uint256 i = 0; i < size; i++) {
+      string memory corpIDString = string.concat("ALLOWED_CORP_ID_", Strings.toString(i));
+      uint256 corpID = vm.envUint(corpIDString);
+      console.log("-------------------\nCorpName: ", corpIDString, " CorpID: ", corpID);
+      corpIDs[i] = corpID;
+    }
+    // corpID[0] = vm.envUint("ALLOWED_CORP_ID");
     //Set the MUD table for the corp whitelist
-    GateAccessWhitelist.set(smartGateId, corpID);
+    GateAccessWhitelist.set(smartGateId, corpIDs);
 
     vm.stopBroadcast();
   }

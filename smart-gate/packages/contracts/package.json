@@ -27,15 +27,16 @@
     "set-namespace": "bash ../../shell-scripts/SetNamespace.sh"
   },
   "dependencies": {
+    "@eveworld/common-constants": "0.0.13",
+    "@eveworld/world": "0.0.17",
     "@latticexyz/cli": "2.2.14",
+    "@latticexyz/explorer": "2.2.14",
     "@latticexyz/schema-type": "2.2.14",
     "@latticexyz/store": "2.2.14",
     "@latticexyz/store-indexer": "2.2.14",
-    "@latticexyz/explorer": "2.2.14",
     "@latticexyz/world": "2.2.14",
     "@latticexyz/world-modules": "2.2.14",
-    "@eveworld/common-constants": "0.0.13",
-    "@eveworld/world": "0.0.17"
+    "@openzeppelin/contracts": "^5.1.0"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",

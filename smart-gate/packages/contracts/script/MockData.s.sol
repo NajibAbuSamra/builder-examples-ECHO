@@ -64,7 +64,7 @@ contract MockData is Script {
     smartGate = SmartGateLib.World({ iface: IBaseWorld(worldAddress), namespace: FRONTIER_WORLD_DEPLOYMENT_NAMESPACE });
 
     //Get the allowed corp
-    uint256 corpID = vm.envUint("ALLOWED_CORP_ID");
+    uint256 corpID = vm.envUint("ALLOWED_CORP_ID_1");
 
     //Create a smart character
     if (CharactersByAddressTable.get(admin) == 0) {
