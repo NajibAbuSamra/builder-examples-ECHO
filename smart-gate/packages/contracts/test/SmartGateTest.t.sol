@@ -83,7 +83,8 @@ contract SmartGateTest is MudTest {
     });
 
     //Get the allowed corp
-    uint256 corpID = vm.envUint("ALLOWED_CORP_ID");
+    uint256[] memory corpID = new uint256[](1);
+    corpID[0] = vm.envUint("ALLOWED_CORP_ID");
     sourceGateId = vm.envUint("SOURCE_GATE_ID");
     sourceGateId = vm.envUint("DESTINATION_GATE_ID");
 
@@ -99,7 +100,7 @@ contract SmartGateTest is MudTest {
       smartCharacter.createCharacter(
         400,
         admin,
-        corpID,
+        corpID[0],
         CharacterEntityRecord({ typeId: 123, itemId: 234, volume: 100 }),
         EntityRecordOffchainTableData({ name: "ron", dappURL: "noURL", description: "." }),
         ""
@@ -130,12 +131,13 @@ contract SmartGateTest is MudTest {
     assertTrue(codeSize > 0);
   }
 
+  uint256[] allowedCorpArr = [uint256(200)];
   function testSetAllowedCorp() public {
     world.call(
       systemId,
       abi.encodeCall(
         SmartGateSystem.setAllowedCorp,
-        (sourceGateId, 200)
+        (sourceGateId, allowedCorpArr)
       )
     );
 
