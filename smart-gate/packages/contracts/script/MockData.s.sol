@@ -64,14 +64,14 @@ contract MockData is Script {
     smartGate = SmartGateLib.World({ iface: IBaseWorld(worldAddress), namespace: FRONTIER_WORLD_DEPLOYMENT_NAMESPACE });
 
     //Get the allowed corp
-    uint256 corpID = vm.envUint("ALLOWED_CORP_ID_1");
+    uint256[] memory corpID = vm.envUint("WHITELIST_CORP_IDS", ",");
 
     //Create a smart character
     if (CharactersByAddressTable.get(admin) == 0) {
       smartCharacter.createCharacter(
         100,     //Character ID
         admin,  // Character Address
-        corpID,  // Corp ID
+        corpID[0],  // Corp ID
         CharacterEntityRecord({ typeId: 123, itemId: 234, volume: 100 }),
         EntityRecordOffchainTableData({ name: "characterName", dappURL: "noURL", description: "." }),
         ""
@@ -79,7 +79,7 @@ contract MockData is Script {
     }
     
     //Fake unallowed corp
-    uint256 fakeCorpID = vm.envUint("ALLOWED_CORP_ID_1") - 1;
+    uint256 fakeCorpID = corpID[0] - 1;
 
     //Create a smart character
     if (CharactersByAddressTable.get(player) == 0) {
