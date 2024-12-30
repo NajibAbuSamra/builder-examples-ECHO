@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@openzeppelin/contracts':
-        specifier: ^5.1.0
-        version: 5.1.0
     devDependencies:
       '@latticexyz/cli':
         specifier: 2.2.14
@@ -111,16 +107,16 @@ importers:
     dependencies:
       '@eveworld/common-constants':
         specifier: 0.0.13
-        version: 0.0.13(typescript@5.4.2)(zod@3.23.8)
+        version: 0.0.13(zod@3.23.8)
       '@eveworld/world':
         specifier: 0.0.17
-        version: 0.0.17(typescript@5.4.2)(zod@3.23.8)
+        version: 0.0.17(zod@3.23.8)
       '@latticexyz/cli':
         specifier: 2.2.14
         version: 2.2.14
       '@latticexyz/explorer':
         specifier: 2.2.14
-        version: 2.2.14(@babel/core@7.26.0)(react-native@0.76.5)(typescript@5.4.2)
+        version: 2.2.14(@babel/core@7.26.0)(react-native@0.76.5)
       '@latticexyz/schema-type':
         specifier: 2.2.14
         version: 2.2.14(typescript@5.4.2)(zod@3.23.8)
@@ -129,16 +125,13 @@ importers:
         version: 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
       '@latticexyz/store-indexer':
         specifier: 2.2.14
-        version: 2.2.14(react@18.3.1)(typescript@5.4.2)
+        version: 2.2.14(react@18.3.1)
       '@latticexyz/world':
         specifier: 2.2.14
         version: 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
       '@latticexyz/world-modules':
         specifier: 2.2.14
-        version: 2.2.14(typescript@5.4.2)
-      '@openzeppelin/contracts':
-        specifier: ^5.1.0
-        version: 5.1.0
+        version: 2.2.14
     devDependencies:
       '@types/node':
         specifier: ^18.15.11
@@ -157,7 +150,7 @@ importers:
         version: 1.3.1(prettier@3.2.5)
       solhint:
         specifier: ^3.3.7
-        version: 3.6.2(typescript@5.4.2)
+        version: 3.6.2
       solhint-config-mud:
         specifier: 2.2.9
         version: 2.2.9
@@ -2387,14 +2380,14 @@ packages:
       ethereum-cryptography: 2.2.1
       micro-ftch: 0.3.1
 
-  /@eveworld/common-constants@0.0.13(typescript@5.4.2)(zod@3.23.8):
+  /@eveworld/common-constants@0.0.13(zod@3.23.8):
     resolution: {integrity: sha512-SI3RZhejBq7hNyLst32OCuhmpyKwrWg98EVnAQm8q/9yiLRSWIMe9xS3fflcfKrm+C7yE1lpESNgxI0gOi09ww==}
     dependencies:
       '@latticexyz/cli': 2.2.8
       '@latticexyz/schema-type': 2.2.8(typescript@5.4.2)(zod@3.23.8)
       '@latticexyz/store': 2.2.8(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
       '@latticexyz/world': 2.2.8(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
-      '@latticexyz/world-modules': 2.2.8(typescript@5.4.2)
+      '@latticexyz/world-modules': 2.2.8
     transitivePeerDependencies:
       - '@aws-sdk/client-kms'
       - asn1.js
@@ -2406,15 +2399,15 @@ packages:
       - zod
     dev: false
 
-  /@eveworld/smart-object-framework@0.0.8(typescript@5.4.2)(zod@3.23.8):
+  /@eveworld/smart-object-framework@0.0.8(zod@3.23.8):
     resolution: {integrity: sha512-M+tj5F7ZSZKdQ6cbE9KW17AHQJi0duLSdiUKPJSk+tyBxocM3a8S9PUcm+tTTRRXtLUH6NQLLZdPOSV1DZFa5w==}
     dependencies:
-      '@eveworld/common-constants': 0.0.13(typescript@5.4.2)(zod@3.23.8)
+      '@eveworld/common-constants': 0.0.13(zod@3.23.8)
       '@latticexyz/cli': 2.2.8
       '@latticexyz/schema-type': 2.2.8(typescript@5.4.2)(zod@3.23.8)
       '@latticexyz/store': 2.2.8(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
       '@latticexyz/world': 2.2.8(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
-      '@latticexyz/world-modules': 2.2.8(typescript@5.4.2)
+      '@latticexyz/world-modules': 2.2.8
     transitivePeerDependencies:
       - '@aws-sdk/client-kms'
       - asn1.js
@@ -2426,17 +2419,17 @@ packages:
       - zod
     dev: false
 
-  /@eveworld/world@0.0.17(typescript@5.4.2)(zod@3.23.8):
+  /@eveworld/world@0.0.17(zod@3.23.8):
     resolution: {integrity: sha512-/CcLDZ0wSu/otvfb4b4psooLcIq09ulvmPqxzx+E379LBBSkPMb546PAibY7PlUiQmzwOhYytF2YR3RyQgNksQ==}
     dependencies:
-      '@eveworld/common-constants': 0.0.13(typescript@5.4.2)(zod@3.23.8)
-      '@eveworld/smart-object-framework': 0.0.8(typescript@5.4.2)(zod@3.23.8)
+      '@eveworld/common-constants': 0.0.13(zod@3.23.8)
+      '@eveworld/smart-object-framework': 0.0.8(zod@3.23.8)
       '@latticexyz/cli': 2.2.8
       '@latticexyz/gas-report': 2.2.8
       '@latticexyz/schema-type': 2.2.8(typescript@5.4.2)(zod@3.23.8)
       '@latticexyz/store': 2.2.8(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
       '@latticexyz/world': 2.2.8(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
-      '@latticexyz/world-modules': 2.2.8(typescript@5.4.2)
+      '@latticexyz/world-modules': 2.2.8
     transitivePeerDependencies:
       - '@aws-sdk/client-kms'
       - asn1.js
@@ -2993,7 +2986,7 @@ packages:
       - zod
     dev: false
 
-  /@latticexyz/explorer@2.2.14(@babel/core@7.26.0)(react-native@0.76.5)(typescript@5.4.2):
+  /@latticexyz/explorer@2.2.14(@babel/core@7.26.0)(react-native@0.76.5):
     resolution: {integrity: sha512-1YwLpzb/8uRFc/KbHRPagw9QjDZyyRQauDv4mIhb7bwVeJcSZ4c7I2FznK46uGCVC3Po62jHnL3EerB4GHALSQ==}
     engines: {node: 18.x || 20.x, pnpm: ^9.6.0}
     hasBin: true
@@ -3004,8 +2997,8 @@ packages:
       '@latticexyz/protocol-parser': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
       '@latticexyz/schema-type': 2.2.14(typescript@5.4.2)(zod@3.23.8)
       '@latticexyz/store': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
-      '@latticexyz/store-indexer': 2.2.14(react@18.3.1)(typescript@5.4.2)
-      '@latticexyz/store-sync': 2.2.14(better-sqlite3@8.7.0)(react@18.3.1)(typescript@5.4.2)
+      '@latticexyz/store-indexer': 2.2.14(react@18.3.1)
+      '@latticexyz/store-sync': 2.2.14(better-sqlite3@8.7.0)(react@18.3.1)
       '@latticexyz/world': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
       '@monaco-editor/react': 4.6.0(monaco-editor@0.52.2)(react-dom@18.3.1)(react@18.3.1)
       '@radix-ui/react-checkbox': 1.1.3(react-dom@18.3.1)(react@18.3.1)
@@ -3036,12 +3029,12 @@ packages:
       sonner: 1.7.1(react-dom@18.3.1)(react@18.3.1)
       sql-autocomplete: 1.1.1
       tailwind-merge: 1.14.0
-      tsup: 6.7.0(typescript@5.4.2)
+      tsup: 6.7.0
       viem: 2.21.19(typescript@5.4.2)(zod@3.23.8)
-      wagmi: 2.12.11(@tanstack/react-query@5.62.10)(react-dom@18.3.1)(react-native@0.76.5)(react@18.3.1)(typescript@5.4.2)(viem@2.21.19)(zod@3.23.8)
+      wagmi: 2.12.11(@tanstack/react-query@5.62.10)(react-dom@18.3.1)(react-native@0.76.5)(react@18.3.1)(viem@2.21.19)(zod@3.23.8)
       yargs: 17.7.2
       zod: 3.23.8
-      zustand: 4.5.5(@types/react@18.2.22)(react@18.3.1)
+      zustand: 4.5.5(react@18.3.1)
     transitivePeerDependencies:
       - '@aws-sdk/client-kms'
       - '@aws-sdk/client-rds-data'
@@ -3098,6 +3091,114 @@ packages:
       - typescript
       - uploadthing
       - utf-8-validate
+    dev: false
+
+  /@latticexyz/explorer@2.2.14(@babel/core@7.26.0)(react-native@0.76.5)(typescript@5.4.2):
+    resolution: {integrity: sha512-1YwLpzb/8uRFc/KbHRPagw9QjDZyyRQauDv4mIhb7bwVeJcSZ4c7I2FznK46uGCVC3Po62jHnL3EerB4GHALSQ==}
+    engines: {node: 18.x || 20.x, pnpm: ^9.6.0}
+    hasBin: true
+    dependencies:
+      '@hookform/resolvers': 3.9.1(react-hook-form@7.54.2)
+      '@latticexyz/common': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/config': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/protocol-parser': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/schema-type': 2.2.14(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/store': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/store-indexer': 2.2.14(react@18.3.1)(typescript@5.4.2)
+      '@latticexyz/store-sync': 2.2.14(better-sqlite3@8.7.0)(react@18.3.1)(typescript@5.4.2)
+      '@latticexyz/world': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@monaco-editor/react': 4.6.0(monaco-editor@0.52.2)(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-checkbox': 1.1.3(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-dialog': 1.1.4(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-label': 2.1.1(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-popover': 1.1.4(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-select': 2.1.4(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-separator': 1.1.1(react-dom@18.3.1)(react@18.3.1)
+      '@radix-ui/react-slot': 1.1.1(react@18.3.1)
+      '@radix-ui/themes': 3.1.6(react-dom@18.3.1)(react@18.3.1)
+      '@rainbow-me/rainbowkit': 2.2.1(@tanstack/react-query@5.62.10)(react-dom@18.3.1)(react@18.3.1)(viem@2.21.19)(wagmi@2.12.11)
+      '@tanstack/react-query': 5.62.10(react@18.3.1)
+      '@tanstack/react-table': 8.20.6(react-dom@18.3.1)(react@18.3.1)
+      better-sqlite3: 8.7.0
+      class-variance-authority: 0.7.1
+      clsx: 2.1.1
+      cmdk: 1.0.0(react-dom@18.3.1)(react@18.3.1)
+      debug: 4.4.0
+      lucide-react: 0.408.0(react@18.3.1)
+      monaco-editor: 0.52.2
+      next: 14.2.5(@babel/core@7.26.0)(react-dom@18.3.1)(react@18.3.1)
+      node-sql-parser: 5.3.5
+      nuqs: 1.20.0(next@14.2.5)
+      query-string: 9.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-hook-form: 7.54.2(react@18.3.1)
+      sonner: 1.7.1(react-dom@18.3.1)(react@18.3.1)
+      sql-autocomplete: 1.1.1
+      tailwind-merge: 1.14.0
+      tsup: 6.7.0(typescript@5.4.2)
+      viem: 2.21.19(typescript@5.4.2)(zod@3.23.8)
+      wagmi: 2.12.11(@tanstack/react-query@5.62.10)(react-dom@18.3.1)(react-native@0.76.5)(react@18.3.1)(typescript@5.4.2)(viem@2.21.19)(zod@3.23.8)
+      yargs: 17.7.2
+      zod: 3.23.8
+      zustand: 4.5.5(react@18.3.1)
+    transitivePeerDependencies:
+      - '@aws-sdk/client-kms'
+      - '@aws-sdk/client-rds-data'
+      - '@azure/app-configuration'
+      - '@azure/cosmos'
+      - '@azure/data-tables'
+      - '@azure/identity'
+      - '@azure/keyvault-secrets'
+      - '@azure/storage-blob'
+      - '@babel/core'
+      - '@capacitor/preferences'
+      - '@cloudflare/workers-types'
+      - '@deno/kv'
+      - '@libsql/client'
+      - '@neondatabase/serverless'
+      - '@netlify/blobs'
+      - '@opentelemetry/api'
+      - '@planetscale/database'
+      - '@playwright/test'
+      - '@react-native-async-storage/async-storage'
+      - '@swc/core'
+      - '@tanstack/query-core'
+      - '@types/better-sqlite3'
+      - '@types/pg'
+      - '@types/react'
+      - '@types/react-dom'
+      - '@types/sql.js'
+      - '@upstash/redis'
+      - '@vercel/blob'
+      - '@vercel/kv'
+      - '@vercel/postgres'
+      - asn1.js
+      - aws4fetch
+      - babel-plugin-macros
+      - bufferutil
+      - bun-types
+      - db0
+      - encoding
+      - immer
+      - ioredis
+      - knex
+      - kysely
+      - mysql2
+      - pg
+      - postcss
+      - react-native
+      - rolldown
+      - rollup
+      - sass
+      - sql.js
+      - sqlite3
+      - supports-color
+      - ts-node
+      - typescript
+      - uploadthing
+      - utf-8-validate
+    dev: true
 
   /@latticexyz/gas-report@2.2.14:
     resolution: {integrity: sha512-pG2SCGqUVXT7x37Sy7uwAX0u+kV91OqHYz0cPugc+mFouGDX1Qhc7FmpeRZXp87OjxwO/rhbroTZH9s2pUtfAw==}
@@ -3209,6 +3310,20 @@ packages:
       - utf-8-validate
       - zod
 
+  /@latticexyz/recs@2.2.14(zod@3.23.8):
+    resolution: {integrity: sha512-QMEBz4nmfkS7yg1N0Ol7BlNmfAJtQO4XYbBkHGhEdalT0XizyIf6mlnK9/EUbsSeECxZqNaUixIVpCV/aOU4NQ==}
+    dependencies:
+      '@latticexyz/schema-type': 2.2.14(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/utils': 2.2.14
+      mobx: 6.13.5
+      rxjs: 7.5.5
+    transitivePeerDependencies:
+      - bufferutil
+      - typescript
+      - utf-8-validate
+      - zod
+    dev: false
+
   /@latticexyz/recs@2.2.9(typescript@5.4.2)(zod@3.23.8):
     resolution: {integrity: sha512-Oy/SnuhW9kLRU30xt7Jh8oEhX+Tglr1r9QLp3YuqNWwQ6vtSOLOjOV6n9BhMYIicFckgTVXrmL45gSsO7dCYpw==}
     dependencies:
@@ -3279,6 +3394,30 @@ packages:
       - typescript
       - utf-8-validate
       - zod
+    dev: true
+
+  /@latticexyz/stash@2.2.14(react@18.3.1)(zod@3.23.8):
+    resolution: {integrity: sha512-cA9x8I6ZtDSfnMusKyl1212LMxxOB8tfUSKK0cm75LkEtwzTkjHLNI1AptlSbw/bYs8dmK7uH8mf1Eqd3I651g==}
+    peerDependencies:
+      react: 18.x
+    dependencies:
+      '@ark/util': 0.2.2
+      '@latticexyz/common': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/config': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/protocol-parser': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/schema-type': 2.2.14(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/store': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      react: 18.3.1
+      viem: 2.21.19(typescript@5.4.2)(zod@3.23.8)
+    transitivePeerDependencies:
+      - '@aws-sdk/client-kms'
+      - asn1.js
+      - bufferutil
+      - supports-color
+      - typescript
+      - utf-8-validate
+      - zod
+    dev: false
 
   /@latticexyz/stash@2.2.9(typescript@5.4.2)(zod@3.23.8):
     resolution: {integrity: sha512-y9dVZY5ZUfBhvfUJVFuxCxoYyVfbysuxFBKp9hWl3PGeLDaJ6ohY6drdbu1VVXm0neM7htBq9JlV7qSgEs8TUg==}
@@ -3298,6 +3437,65 @@ packages:
       - typescript
       - utf-8-validate
       - zod
+    dev: false
+
+  /@latticexyz/store-indexer@2.2.14(react@18.3.1):
+    resolution: {integrity: sha512-PTpnWZKxk/YVCQbZnBlAyOa+ribVqYB6v4fcjJkhR8X8elfMLCJdqFw3Bti8va8MrJkDShQv0ROaKEIrECRKBw==}
+    hasBin: true
+    dependencies:
+      '@koa/cors': 4.0.0
+      '@koa/router': 12.0.2
+      '@latticexyz/block-logs-stream': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/common': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/protocol-parser': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/store': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/store-sync': 2.2.14(better-sqlite3@8.7.0)(react@18.3.1)
+      '@sentry/node': 7.120.2
+      '@sentry/profiling-node': 1.3.5(@sentry/node@7.120.2)
+      '@sentry/utils': 7.120.2
+      '@trpc/client': 10.34.0(@trpc/server@10.34.0)
+      '@trpc/server': 10.34.0
+      accepts: 1.3.8
+      better-sqlite3: 8.7.0
+      debug: 4.4.0
+      dotenv: 16.4.7
+      drizzle-orm: 0.28.6(better-sqlite3@8.7.0)(postgres@3.3.5)
+      koa: 2.15.3
+      koa-compose: 4.1.0
+      postgres: 3.3.5
+      prom-client: 15.1.3
+      rxjs: 7.5.5
+      superjson: 1.13.3
+      trpc-koa-adapter: 1.2.2(@trpc/server@10.34.0)(koa@2.15.3)
+      viem: 2.21.19(typescript@5.4.2)(zod@3.23.8)
+      zod: 3.23.8
+    transitivePeerDependencies:
+      - '@aws-sdk/client-kms'
+      - '@aws-sdk/client-rds-data'
+      - '@cloudflare/workers-types'
+      - '@libsql/client'
+      - '@neondatabase/serverless'
+      - '@opentelemetry/api'
+      - '@planetscale/database'
+      - '@types/better-sqlite3'
+      - '@types/pg'
+      - '@types/react'
+      - '@types/sql.js'
+      - '@vercel/postgres'
+      - asn1.js
+      - bufferutil
+      - bun-types
+      - immer
+      - knex
+      - kysely
+      - mysql2
+      - pg
+      - react
+      - sql.js
+      - sqlite3
+      - supports-color
+      - typescript
+      - utf-8-validate
     dev: false
 
   /@latticexyz/store-indexer@2.2.14(react@18.3.1)(typescript@5.4.2):
@@ -3357,6 +3555,62 @@ packages:
       - supports-color
       - typescript
       - utf-8-validate
+    dev: true
+
+  /@latticexyz/store-sync@2.2.14(better-sqlite3@8.7.0)(react@18.3.1):
+    resolution: {integrity: sha512-0Fnk7NVXLZwTdkS9QxF+OLwCELujKE8eZiy+2nzs3anf8qAI6PVFSDD1SMYMtS9gawfHDhrwrQRiJAEYSypmVQ==}
+    dependencies:
+      '@ark/util': 0.2.2
+      '@latticexyz/block-logs-stream': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/common': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/config': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/protocol-parser': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/recs': 2.2.14(zod@3.23.8)
+      '@latticexyz/schema-type': 2.2.14(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/stash': 2.2.14(react@18.3.1)(zod@3.23.8)
+      '@latticexyz/store': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@latticexyz/world': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
+      '@trpc/client': 10.34.0(@trpc/server@10.34.0)
+      '@trpc/server': 10.34.0
+      change-case: 5.4.4
+      debug: 4.4.0
+      drizzle-orm: 0.28.6(better-sqlite3@8.7.0)(kysely@0.26.3)(postgres@3.4.5)(sql.js@1.12.0)
+      fast-deep-equal: 3.1.3
+      kysely: 0.26.3
+      postgres: 3.4.5
+      rxjs: 7.5.5
+      sql.js: 1.12.0
+      superjson: 1.13.3
+      viem: 2.21.19(typescript@5.4.2)(zod@3.23.8)
+      zod: 3.23.8
+      zustand: 4.5.5(react@18.3.1)
+    transitivePeerDependencies:
+      - '@aws-sdk/client-kms'
+      - '@aws-sdk/client-rds-data'
+      - '@cloudflare/workers-types'
+      - '@libsql/client'
+      - '@neondatabase/serverless'
+      - '@opentelemetry/api'
+      - '@planetscale/database'
+      - '@types/better-sqlite3'
+      - '@types/pg'
+      - '@types/react'
+      - '@types/sql.js'
+      - '@vercel/postgres'
+      - asn1.js
+      - better-sqlite3
+      - bufferutil
+      - bun-types
+      - immer
+      - knex
+      - mysql2
+      - pg
+      - react
+      - sqlite3
+      - supports-color
+      - typescript
+      - utf-8-validate
+    dev: false
 
   /@latticexyz/store-sync@2.2.14(better-sqlite3@8.7.0)(react@18.3.1)(typescript@5.4.2):
     resolution: {integrity: sha512-0Fnk7NVXLZwTdkS9QxF+OLwCELujKE8eZiy+2nzs3anf8qAI6PVFSDD1SMYMtS9gawfHDhrwrQRiJAEYSypmVQ==}
@@ -3384,7 +3638,7 @@ packages:
       superjson: 1.13.3
       viem: 2.21.19(typescript@5.4.2)(zod@3.23.8)
       zod: 3.23.8
-      zustand: 4.5.5(@types/react@18.2.22)(react@18.3.1)
+      zustand: 4.5.5(react@18.3.1)
     transitivePeerDependencies:
       - '@aws-sdk/client-kms'
       - '@aws-sdk/client-rds-data'
@@ -3411,6 +3665,7 @@ packages:
       - supports-color
       - typescript
       - utf-8-validate
+    dev: true
 
   /@latticexyz/store-sync@2.2.9(@types/react@18.2.22)(react@18.3.1)(typescript@5.4.2):
     resolution: {integrity: sha512-L/dTkXzvqF43wrI7B1jLDWEbhZmhzaxfIoirkGK5RgfProAslLM/CXGaYztVtnqZBupzR7O1DG/olCxvKVeHmw==}
@@ -3584,7 +3839,7 @@ packages:
       - zod
     dev: false
 
-  /@latticexyz/world-modules@2.2.14(typescript@5.4.2):
+  /@latticexyz/world-modules@2.2.14:
     resolution: {integrity: sha512-3zccAjrV3ZzfDDqZiKfGZGlWh5aFitsuKgHE5J7I+iSbOZdPpUUZDfJQSfx7diqhr4cRA+J9UMi3YkO5sOCVvA==}
     dependencies:
       '@latticexyz/common': 2.2.14(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
@@ -3602,7 +3857,7 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@latticexyz/world-modules@2.2.8(typescript@5.4.2):
+  /@latticexyz/world-modules@2.2.8:
     resolution: {integrity: sha512-hZkMSddEcjNXViovPqOH7gMJm+TcIfyUSoCCBN73FBF7Pk8meQzmQmaxyl3Lm66eX4+w4jytVZOGjLLXzFNCsw==}
     dependencies:
       '@latticexyz/common': 2.2.8(@aws-sdk/client-kms@3.716.0)(asn1.js@5.4.1)(typescript@5.4.2)(zod@3.23.8)
@@ -4118,10 +4373,6 @@ packages:
   /@opentelemetry/api@1.9.0:
     resolution: {integrity: sha512-3giAOQvZiH5F9bMlMiv8+GSPMeqg0dbaeo58/0SlA9sxSqZhnUtxzX9/2FzyhS9sWQf5S0GJE0AKBrFqjpeYcg==}
     engines: {node: '>=8.0.0'}
-
-  /@openzeppelin/contracts@5.1.0:
-    resolution: {integrity: sha512-p1ULhl7BXzjjbha5aqst+QMLY+4/LCWADXOCsmLHRM77AqiPjnd9vvUN9sosUfhL9JGKpZ0TjEGxgvnizmWGSA==}
-    dev: false
 
   /@pkgjs/parseargs@0.11.0:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -5383,7 +5634,7 @@ packages:
       react-remove-scroll: 2.6.0(react@18.3.1)
       ua-parser-js: 1.0.40
       viem: 2.21.19(typescript@5.4.2)(zod@3.23.8)
-      wagmi: 2.12.11(@tanstack/react-query@5.62.10)(react-dom@18.3.1)(react-native@0.76.5)(react@18.3.1)(typescript@5.4.2)(viem@2.21.19)(zod@3.23.8)
+      wagmi: 2.12.11(@tanstack/react-query@5.62.10)(react-dom@18.3.1)(react-native@0.76.5)(react@18.3.1)(viem@2.21.19)(zod@3.23.8)
     transitivePeerDependencies:
       - '@types/react'
       - babel-plugin-macros
@@ -5582,8 +5833,32 @@ packages:
       - typescript
       - utf-8-validate
       - zod
+    dev: true
+
+  /@safe-global/safe-apps-provider@0.18.3(zod@3.23.8):
+    resolution: {integrity: sha512-f/0cNv3S4v7p8rowAjj0hDCg8Q8P/wBjp5twkNWeBdvd0RDr7BuRBPPk74LCqmjQ82P+1ltLlkmVFSmxTIT7XQ==}
+    dependencies:
+      '@safe-global/safe-apps-sdk': 9.1.0(zod@3.23.8)
+      events: 3.3.0
+    transitivePeerDependencies:
+      - bufferutil
+      - typescript
+      - utf-8-validate
+      - zod
 
   /@safe-global/safe-apps-sdk@9.1.0(typescript@5.4.2)(zod@3.23.8):
+    resolution: {integrity: sha512-N5p/ulfnnA2Pi2M3YeWjULeWbjo7ei22JwU/IXnhoHzKq3pYCN6ynL9mJBOlvDVv892EgLPCWCOwQk/uBT2v0Q==}
+    dependencies:
+      '@safe-global/safe-gateway-typescript-sdk': 3.22.4
+      viem: 2.21.6(typescript@5.4.2)(zod@3.23.8)
+    transitivePeerDependencies:
+      - bufferutil
+      - typescript
+      - utf-8-validate
+      - zod
+    dev: true
+
+  /@safe-global/safe-apps-sdk@9.1.0(zod@3.23.8):
     resolution: {integrity: sha512-N5p/ulfnnA2Pi2M3YeWjULeWbjo7ei22JwU/IXnhoHzKq3pYCN6ynL9mJBOlvDVv892EgLPCWCOwQk/uBT2v0Q==}
     dependencies:
       '@safe-global/safe-gateway-typescript-sdk': 3.22.4
@@ -6549,6 +6824,57 @@ packages:
       - uploadthing
       - utf-8-validate
       - zod
+    dev: true
+
+  /@wagmi/connectors@5.1.10(@wagmi/core@2.13.5)(react-dom@18.3.1)(react-native@0.76.5)(react@18.3.1)(viem@2.21.19)(zod@3.23.8):
+    resolution: {integrity: sha512-ybgKV09PIhgUgQ4atXTs2KOy4Hevd6f972SXfx6HTgsnFXlzxzN6o0aWjhavZOYjvx5tjuL3+8Mgqo0R7uP5Cg==}
+    peerDependencies:
+      '@wagmi/core': 2.13.5
+      typescript: '>=5.0.4'
+      viem: 2.x
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@coinbase/wallet-sdk': 4.0.4
+      '@metamask/sdk': 0.28.2(react-dom@18.3.1)(react-native@0.76.5)(react@18.3.1)
+      '@safe-global/safe-apps-provider': 0.18.3(zod@3.23.8)
+      '@safe-global/safe-apps-sdk': 9.1.0(zod@3.23.8)
+      '@wagmi/core': 2.13.5(react@18.3.1)(viem@2.21.19)
+      '@walletconnect/ethereum-provider': 2.16.1(react@18.3.1)
+      '@walletconnect/modal': 2.6.2(react@18.3.1)
+      cbw-sdk: /@coinbase/wallet-sdk@3.9.3
+      viem: 2.21.19(typescript@5.4.2)(zod@3.23.8)
+    transitivePeerDependencies:
+      - '@azure/app-configuration'
+      - '@azure/cosmos'
+      - '@azure/data-tables'
+      - '@azure/identity'
+      - '@azure/keyvault-secrets'
+      - '@azure/storage-blob'
+      - '@capacitor/preferences'
+      - '@deno/kv'
+      - '@netlify/blobs'
+      - '@planetscale/database'
+      - '@react-native-async-storage/async-storage'
+      - '@types/react'
+      - '@upstash/redis'
+      - '@vercel/blob'
+      - '@vercel/kv'
+      - aws4fetch
+      - bufferutil
+      - db0
+      - encoding
+      - ioredis
+      - react
+      - react-dom
+      - react-native
+      - rolldown
+      - rollup
+      - supports-color
+      - uploadthing
+      - utf-8-validate
+      - zod
 
   /@wagmi/core@2.13.5(react@18.3.1)(typescript@5.4.2)(viem@2.21.19):
     resolution: {integrity: sha512-lvX/hApJTSA/H2kOklokjIYiUpnT8CpBH80GeOiKxU0CGK1wNHTu20GRTCy0GF1t7jkNwPSG3m0SmnXmgYMmHw==}
@@ -6565,6 +6891,28 @@ packages:
       eventemitter3: 5.0.1
       mipd: 0.0.7(typescript@5.4.2)
       typescript: 5.4.2
+      viem: 2.21.19(typescript@5.4.2)(zod@3.23.8)
+      zustand: 4.4.1(react@18.3.1)
+    transitivePeerDependencies:
+      - '@types/react'
+      - immer
+      - react
+    dev: true
+
+  /@wagmi/core@2.13.5(react@18.3.1)(viem@2.21.19):
+    resolution: {integrity: sha512-lvX/hApJTSA/H2kOklokjIYiUpnT8CpBH80GeOiKxU0CGK1wNHTu20GRTCy0GF1t7jkNwPSG3m0SmnXmgYMmHw==}
+    peerDependencies:
+      '@tanstack/query-core': '>=5.0.0'
+      typescript: '>=5.0.4'
+      viem: 2.x
+    peerDependenciesMeta:
+      '@tanstack/query-core':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      eventemitter3: 5.0.1
+      mipd: 0.0.7
       viem: 2.21.19(typescript@5.4.2)(zod@3.23.8)
       zustand: 4.4.1(react@18.3.1)
     transitivePeerDependencies:
@@ -7733,7 +8081,7 @@ packages:
       js-yaml: 3.14.1
       parse-json: 4.0.0
 
-  /cosmiconfig@8.3.6(typescript@5.4.2):
+  /cosmiconfig@8.3.6:
     resolution: {integrity: sha512-kcZ6+W5QzcJ3P1Mt+83OUv/oHFqZHIx8DuxG6eZ5RGMERoLqp4BuGjhHLYGK+Kf5XVkQvqBSmAy/nGWN3qDgEA==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -7746,7 +8094,6 @@ packages:
       js-yaml: 4.1.0
       parse-json: 5.2.0
       path-type: 4.0.0
-      typescript: 5.4.2
     dev: true
 
   /crc-32@1.2.2:
@@ -10163,6 +10510,14 @@ packages:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
 
+  /mipd@0.0.7:
+    resolution: {integrity: sha512-aAPZPNDQ3uMTdKbuO2YmAw2TxLHO0moa4YKAyETM/DTj5FloZo+a+8tU+iv4GmW+sOxKLSRwcSFuczk+Cpt6fg==}
+    peerDependencies:
+      typescript: '>=5.0.4'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   /mipd@0.0.7(typescript@5.4.2):
     resolution: {integrity: sha512-aAPZPNDQ3uMTdKbuO2YmAw2TxLHO0moa4YKAyETM/DTj5FloZo+a+8tU+iv4GmW+sOxKLSRwcSFuczk+Cpt6fg==}
     peerDependencies:
@@ -10172,6 +10527,7 @@ packages:
         optional: true
     dependencies:
       typescript: 5.4.2
+    dev: true
 
   /mitt@3.0.1:
     resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
@@ -11674,7 +12030,7 @@ packages:
       '@solidity-parser/parser': 0.16.2
     dev: true
 
-  /solhint@3.6.2(typescript@5.4.2):
+  /solhint@3.6.2:
     resolution: {integrity: sha512-85EeLbmkcPwD+3JR7aEMKsVC9YrRSxd4qkXuMzrlf7+z2Eqdfm1wHWq1ffTuo5aDhoZxp2I9yF3QkxZOxOL7aQ==}
     hasBin: true
     dependencies:
@@ -11684,7 +12040,7 @@ packages:
       ast-parents: 0.0.1
       chalk: 4.1.2
       commander: 10.0.1
-      cosmiconfig: 8.3.6(typescript@5.4.2)
+      cosmiconfig: 8.3.6
       fast-diff: 1.3.0
       glob: 8.1.0
       ignore: 5.3.2
@@ -12129,6 +12485,41 @@ packages:
     resolution: {integrity: sha512-LxhtAkPDTkVCMQjt2h6eBVY28KCjikZqZfMcC15YBeNjkgUpdCfBu5HoiOTDu86v6smE8yOjyEktJ8hlbANHQA==}
     engines: {node: '>=0.6.x'}
 
+  /tsup@6.7.0:
+    resolution: {integrity: sha512-L3o8hGkaHnu5TdJns+mCqFsDBo83bJ44rlK7e6VdanIvpea4ArPcU3swWGsLVbXak1PqQx/V+SSmFPujBK+zEQ==}
+    engines: {node: '>=14.18'}
+    hasBin: true
+    peerDependencies:
+      '@swc/core': ^1
+      postcss: ^8.4.12
+      typescript: '>=4.1.0'
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      postcss:
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      bundle-require: 4.2.1(esbuild@0.17.19)
+      cac: 6.7.14
+      chokidar: 3.6.0
+      debug: 4.4.0
+      esbuild: 0.17.19
+      execa: 5.1.1
+      globby: 11.1.0
+      joycon: 3.1.1
+      postcss-load-config: 3.1.4
+      resolve-from: 5.0.0
+      rollup: 3.29.5
+      source-map: 0.8.0-beta.0
+      sucrase: 3.35.0
+      tree-kill: 1.2.2
+    transitivePeerDependencies:
+      - supports-color
+      - ts-node
+    dev: false
+
   /tsup@6.7.0(typescript@5.4.2):
     resolution: {integrity: sha512-L3o8hGkaHnu5TdJns+mCqFsDBo83bJ44rlK7e6VdanIvpea4ArPcU3swWGsLVbXak1PqQx/V+SSmFPujBK+zEQ==}
     engines: {node: '>=14.18'}
@@ -12163,6 +12554,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
       - ts-node
+    dev: true
 
   /tunnel-agent@0.6.0:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
@@ -12632,6 +13024,56 @@ packages:
       - uploadthing
       - utf-8-validate
       - zod
+    dev: true
+
+  /wagmi@2.12.11(@tanstack/react-query@5.62.10)(react-dom@18.3.1)(react-native@0.76.5)(react@18.3.1)(viem@2.21.19)(zod@3.23.8):
+    resolution: {integrity: sha512-CtK05Hl5nKVskiwvNEtxMIAMJwI8RF+6qwVqlhypDs+Y1c30gVnNnF7ivAuVs4xzJbAsZ5LUmsrVVxUMIC0KDg==}
+    peerDependencies:
+      '@tanstack/react-query': '>=5.0.0'
+      react: '>=18'
+      typescript: '>=5.0.4'
+      viem: 2.x
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@tanstack/react-query': 5.62.10(react@18.3.1)
+      '@wagmi/connectors': 5.1.10(@wagmi/core@2.13.5)(react-dom@18.3.1)(react-native@0.76.5)(react@18.3.1)(viem@2.21.19)(zod@3.23.8)
+      '@wagmi/core': 2.13.5(react@18.3.1)(viem@2.21.19)
+      react: 18.3.1
+      use-sync-external-store: 1.2.0(react@18.3.1)
+      viem: 2.21.19(typescript@5.4.2)(zod@3.23.8)
+    transitivePeerDependencies:
+      - '@azure/app-configuration'
+      - '@azure/cosmos'
+      - '@azure/data-tables'
+      - '@azure/identity'
+      - '@azure/keyvault-secrets'
+      - '@azure/storage-blob'
+      - '@capacitor/preferences'
+      - '@deno/kv'
+      - '@netlify/blobs'
+      - '@planetscale/database'
+      - '@react-native-async-storage/async-storage'
+      - '@tanstack/query-core'
+      - '@types/react'
+      - '@upstash/redis'
+      - '@vercel/blob'
+      - '@vercel/kv'
+      - aws4fetch
+      - bufferutil
+      - db0
+      - encoding
+      - immer
+      - ioredis
+      - react-dom
+      - react-native
+      - rolldown
+      - rollup
+      - supports-color
+      - uploadthing
+      - utf-8-validate
+      - zod
 
   /wait-port@1.1.0:
     resolution: {integrity: sha512-3e04qkoN3LxTMLakdqeWth8nih8usyg+sf1Bgdf9wwUkp05iuK1eSY/QpLvscT/+F/gA89+LpUmmgBtesbqI2Q==}
@@ -12962,6 +13404,25 @@ packages:
         optional: true
     dependencies:
       '@types/react': 18.2.22
+      react: 18.3.1
+      use-sync-external-store: 1.2.2(react@18.3.1)
+    dev: false
+
+  /zustand@4.5.5(react@18.3.1):
+    resolution: {integrity: sha512-+0PALYNJNgK6hldkgDq2vLrw5f6g/jCInz52n9RTpropGgeAf/ioFUCdtsjCqu4gNhW9D01rUQBROoRjdzyn2Q==}
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      '@types/react': '>=16.8'
+      immer: '>=9.0.6'
+      react: '>=16.8'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+    dependencies:
       react: 18.3.1
       use-sync-external-store: 1.2.2(react@18.3.1)
 

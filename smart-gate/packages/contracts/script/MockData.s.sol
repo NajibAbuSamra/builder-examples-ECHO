@@ -78,12 +78,15 @@ contract MockData is Script {
       );
     }
     
+    //Fake unallowed corp
+    uint256 fakeCorpID = vm.envUint("ALLOWED_CORP_ID_1") - 1;
+
     //Create a smart character
     if (CharactersByAddressTable.get(player) == 0) {
       smartCharacter.createCharacter(
         200,     //Character ID
         player,  // Character Address
-        200,     // Corp ID
+        fakeCorpID,     // Corp ID
         CharacterEntityRecord({ typeId: 123, itemId: 234, volume: 100 }),
         EntityRecordOffchainTableData({ name: "characterName", dappURL: "noURL", description: "." }),
         ""

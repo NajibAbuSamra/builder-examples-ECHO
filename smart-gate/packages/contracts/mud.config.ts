@@ -10,13 +10,6 @@ export default defineWorld({
       },
       key: ["smartObjectId"],
     },
-	  AllowedCorpWhiteList: {
-	    schema: {
-        corp: "uint256",
-        allowed: "bool",
-	    },
-	    key: ["corp"],
-	  },
     GateAccessWhitelist: {
       schema: {
         smartObjectId: "uint256",

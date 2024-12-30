@@ -20,7 +20,6 @@
     "gate-whitelist": ". ./.env && pnpm forge script ./script/GateWhitelist.s.sol:GateWhitelist --broadcast --rpc-url $RPC_URL --chain-id $CHAIN_ID --sig \"run(address)\" $WORLD_ADDRESS -vvv",
     "link-gates": ". ./.env && pnpm forge script ./script/LinkGates.s.sol:LinkGates --broadcast --rpc-url $RPC_URL --chain-id $CHAIN_ID --sig \"run(address)\" $WORLD_ADDRESS -vvv",
     "can-jump": ". ./.env && pnpm forge script ./script/CanJump.s.sol:CanJump --broadcast --rpc-url $RPC_URL --chain-id $CHAIN_ID --sig \"run(address)\" $WORLD_ADDRESS -vv",
-    "white-list-corp": ". ./.env && pnpm forge script ./script/WhiteListCorp.s.sol:WhiteListCorp --broadcast --rpc-url $RPC_URL --chain-id $CHAIN_ID --sig \"run(address)\" $WORLD_ADDRESS -vv",
     "env-stillness": "bash ../../shell-scripts/ConvertEnvToServer.sh stillness",
     "env-nova": "bash ../../shell-scripts/ConvertEnvToServer.sh nova",
     "env-local": "bash ../../shell-scripts/ConvertEnvToLocal.sh",
@@ -35,8 +34,7 @@
     "@latticexyz/store": "2.2.14",
     "@latticexyz/store-indexer": "2.2.14",
     "@latticexyz/world": "2.2.14",
-    "@latticexyz/world-modules": "2.2.14",
-    "@openzeppelin/contracts": "^5.1.0"
+    "@latticexyz/world-modules": "2.2.14"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",

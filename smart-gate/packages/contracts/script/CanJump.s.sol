@@ -35,7 +35,7 @@ contract CanJump is Script {
     console.log("Can Jump:", smartGate.canJump(100, sourceGateId, destinationGateId));
 
     console.log("-------------------\nTESTING INCORRECT CORP");
-    console.log("Can Jump:", smartGate.canJump(1234, sourceGateId, destinationGateId));
+    console.log("Can Jump:", smartGate.canJump(200, sourceGateId, destinationGateId));
 
     vm.stopBroadcast();
   }
