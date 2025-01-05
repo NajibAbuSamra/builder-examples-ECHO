@@ -17,6 +17,7 @@
     "test": ". ./.env && forge test --fork-url $RPC_URL",
     "mock-data": ". ./.env && pnpm forge script ./script/MockData.s.sol:MockData --broadcast --rpc-url $RPC_URL --chain-id $CHAIN_ID --sig \"run(address)\" $WORLD_ADDRESS -vvv",
     "configure-smart-gates": ". ./.env && pnpm forge script ./script/ConfigureSmartGate.s.sol:ConfigureSmartGate --broadcast --rpc-url $RPC_URL --chain-id $CHAIN_ID --sig \"run(address)\" $WORLD_ADDRESS -vvv",
+    "gate-whitelist": ". ./.env && pnpm forge script ./script/GateWhitelist.s.sol:GateWhitelist --broadcast --rpc-url $RPC_URL --chain-id $CHAIN_ID --sig \"run(address)\" $WORLD_ADDRESS -vvv",
     "link-gates": ". ./.env && pnpm forge script ./script/LinkGates.s.sol:LinkGates --broadcast --rpc-url $RPC_URL --chain-id $CHAIN_ID --sig \"run(address)\" $WORLD_ADDRESS -vvv",
     "can-jump": ". ./.env && pnpm forge script ./script/CanJump.s.sol:CanJump --broadcast --rpc-url $RPC_URL --chain-id $CHAIN_ID --sig \"run(address)\" $WORLD_ADDRESS -vv",
     "env-stillness": "bash ../../shell-scripts/ConvertEnvToServer.sh stillness",
@@ -25,15 +26,15 @@
     "set-namespace": "bash ../../shell-scripts/SetNamespace.sh"
   },
   "dependencies": {
+    "@eveworld/common-constants": "0.0.13",
+    "@eveworld/world": "0.0.17",
     "@latticexyz/cli": "2.2.14",
+    "@latticexyz/explorer": "2.2.14",
     "@latticexyz/schema-type": "2.2.14",
     "@latticexyz/store": "2.2.14",
     "@latticexyz/store-indexer": "2.2.14",
-    "@latticexyz/explorer": "2.2.14",
     "@latticexyz/world": "2.2.14",
-    "@latticexyz/world-modules": "2.2.14",
-    "@eveworld/common-constants": "0.0.13",
-    "@eveworld/world": "0.0.17"
+    "@latticexyz/world-modules": "2.2.14"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",

@@ -10,6 +10,7 @@ import { RESOURCE_SYSTEM } from "@latticexyz/world/src/worldResourceTypes.sol";
 
 import { CharactersTable } from "@eveworld/world/src/codegen/tables/CharactersTable.sol";
 import { GateAccess } from "../codegen/tables/GateAccess.sol";
+import { GateAccessWhitelist } from "../codegen/tables/GateAccessWhitelist.sol";
 
 import { IERC721 } from "@eveworld/world/src/modules/eve-erc721-puppet/IERC721.sol";
 
@@ -17,7 +18,9 @@ import { DeployableTokenTable } from "@eveworld/world/src/codegen/tables/Deploya
 
 /**
  * @dev This contract is an example for implementing logic to a smart gate
+ * @notice The additional commented out parameter in the funtion call is unimplemented flag to use a whitelist or not
  */
+
 contract SmartGateSystem is System {  
   /**
    * @dev Only owner modifer
@@ -30,20 +33,22 @@ contract SmartGateSystem is System {
 
   function canJump(uint256 characterId, uint256 sourceGateId, uint256 destinationGateId) public view returns (bool) {
     //Get the allowed corp
-    uint256 allowedCorp = GateAccess.get(sourceGateId);
+    uint256[] memory allowedCorp = GateAccessWhitelist.get(sourceGateId);
 
     //Get the character corp
     uint256 characterCorp = CharactersTable.getCorpId(characterId);
-
-    //If the corp is the same, allow jumps
-    if(allowedCorp == characterCorp){
-      return true;
-    } else{
-      return false;
-    }    
+    //if(gateWhitelist){
+    for (uint256 i = 0; i < allowedCorp.length; i++) {
+      if(allowedCorp[i] == characterCorp){
+        console.log("-------------------\nCan jump, corp in Allowed Whitelist: ", characterCorp);
+        return true;
+      }
+    }
+    console.log("-------------------\nCan't jump, corp not allowed by Allowed Whitelist: ", characterCorp);
+    return false;
   }
 
-  function setAllowedCorp(uint256 sourceGateId, uint256 corpID) public onlyOwner(sourceGateId) {
-    GateAccess.set(sourceGateId, corpID);
+  function setAllowedCorp(uint256 sourceGateId, uint256[] memory corpID) public onlyOwner(sourceGateId) {
+    GateAccessWhitelist.set(sourceGateId, corpID);
   }
 }
