@@ -48,6 +48,8 @@ contract SmartGateTest is MudTest {
 
   IWorld world;
 
+  address admin;
+
   uint256 sourceGateId;
   uint256 destinationGateId;
 
@@ -57,7 +59,7 @@ contract SmartGateTest is MudTest {
     world = IWorld(worldAddress);
 
     uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-    address admin = vm.addr(deployerPrivateKey);
+    admin = vm.addr(deployerPrivateKey);
 
     uint256 playerPrivateKey = vm.envUint("TEST_PLAYER_PRIVATE_KEY");
     address player = vm.addr(playerPrivateKey);
@@ -85,16 +87,9 @@ contract SmartGateTest is MudTest {
     //Get the allowed corp
     uint256[] memory corpID = new uint256[](1);
     corpID[0] = vm.envUint("ALLOWED_CORP_ID");
+    corpID = vm.envUint("ALLOWED_CORP_ID");
     sourceGateId = vm.envUint("SOURCE_GATE_ID");
     sourceGateId = vm.envUint("DESTINATION_GATE_ID");
-
-    world.call(
-      systemId,
-      abi.encodeCall(
-        SmartGateSystem.setAllowedCorp,
-        (sourceGateId, corpID)
-      )
-    );
 
     if (CharactersByAddressTable.get(admin) == 0) {
       smartCharacter.createCharacter(
@@ -112,13 +107,23 @@ contract SmartGateTest is MudTest {
         player,
         4041,
         CharacterEntityRecord({ typeId: 123, itemId: 234, volume: 100 }),
-        EntityRecordOffchainTableData({ name: "harryporter", dappURL: "noURL", description: "." }),
+        EntityRecordOffchainTableData({ name: "harrypotter", dappURL: "noURL", description: "." }),
         ""
       );
     }
 
     createAnchorAndOnline(sourceGateId, admin);
-    createAnchorAndOnline(destinationGateId, admin);    
+    createAnchorAndOnline(destinationGateId, admin);     
+
+    vm.startPrank(admin);
+    world.call(
+      systemId,
+      abi.encodeCall(
+        SmartGateSystem.setAllowedCorp,
+        (sourceGateId, corpID)
+      )
+    );
+    vm.stopPrank();
   }
 
   //Test if the world exists
@@ -133,6 +138,8 @@ contract SmartGateTest is MudTest {
 
   uint256[] allowedCorpArr = [uint256(200)];
   function testSetAllowedCorp() public {
+    vm.startPrank(admin);
+
     world.call(
       systemId,
       abi.encodeCall(
@@ -144,6 +151,22 @@ contract SmartGateTest is MudTest {
     uint256 allowedCorp = GateAccess.get(sourceGateId);
 
     assertEq(allowedCorp, 200, "Allowed corp should now be 200");
+  }
+
+  function testSetAllowedCorpNotAdmin() public {
+    vm.expectRevert();
+
+    world.call(
+      systemId,
+      abi.encodeCall(
+        SmartGateSystem.setAllowedCorp,
+        (sourceGateId, 200)
+      )
+    );
+
+    uint256 allowedCorp = GateAccess.get(sourceGateId);
+
+    assertEq(allowedCorp, corpID, "Allowed corp should be set to ALLOWED_CORP_ID");
   }
 
   //Test can jump to the destination gate
